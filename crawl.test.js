@@ -80,10 +80,12 @@ test("getURLsFromHTML both", () => {
   `;
   const inputBaseURL = "https://example.com.dev";
   const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL);
-  const expected = ["https://example.com.dev/path1/", "https://example.com.dev/path2/"];
+  const expected = [
+    "https://example.com.dev/path1/",
+    "https://example.com.dev/path2/",
+  ];
   expect(actual).toEqual(expected);
 });
-
 
 test("getURLsFromHTML invalid", () => {
   const inputHTMLBody = `
